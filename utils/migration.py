@@ -18,9 +18,9 @@ authors = db.authors.find()
 for author in authors:
     Author.objects.get_or_create(
         fullname=author['fullname'],
-        date_born=author['date_born'],
-        location_born=author['location_born'],
-        bio=author['bio']
+        date_born=author['born_date'],
+        location_born=author['born_location'],
+        bio=author['description']
     )
 quotes = db.quotes.find()
 
