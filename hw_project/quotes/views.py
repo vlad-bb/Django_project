@@ -1,3 +1,4 @@
+from django import db
 from django.shortcuts import render
 from django.core.paginator import Paginator
 
@@ -15,8 +16,8 @@ def main(request, page=1):
     return render(request, 'quotes/index.html', context= {'quotes': quotes_on_page})
 
 
-quotes = db.quotes.find()
+#quotes = db.quotes.find()
 
 
-for quote in quotes:
-    print(quote.tags)
+#for quote in quotes:
+    #print(quote.tags)
